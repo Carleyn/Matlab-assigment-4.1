@@ -85,9 +85,12 @@ for m = 1:numel(N)                                  % considers all values of N
    
    % Calculate the value at ±T1:
    B_T1 = real(B(round(T1*points/T0)+1));
+   disp('The value at t=±T1 does not change over N')
 
    % Calculate the peak value of B:
    B_peak = max(real(B));
+   disp('The peak value of B does change over N, the higher N the more the peak')
+   disp('value will converge to the peak value of the box function')
 
    % Compute the energy in the differences
    % the sum of the squares of the local differences between the numerical
@@ -108,14 +111,7 @@ for m = 1:numel(N)                                  % considers all values of N
    ylabel('Amplitude')
    legend ('Original box', 'Approximated','Location','south')
 end
-    
-%%
-disp('The value at is', B_T1)
-disp('This value does not change over N')
 
-disp('The peak value is',B_peak)
-disp('This value does change over N, the higher N the more the peak')
-disp('value will converge to the peak value of the box function')
 %% Display the energy in the differences
 figure ()
 plot(N,D,'LineWidth',linewidth)

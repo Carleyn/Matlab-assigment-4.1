@@ -86,7 +86,7 @@ for m = 1:numel(N)                                  % considers all values of N
    % Calculate the value at ±T1:
    B_T1 = real(B(round(T1*points/T0)+1));
    disp('The value at t=±T1 does not change over N')
-   
+
    % Calculate the peak value of B:
    B_peak = max(real(B));
    disp('The peak value of B does change over N, the higher N the more the peak')
